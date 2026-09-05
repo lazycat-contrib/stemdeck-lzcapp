@@ -5,18 +5,16 @@ application:
   upstreams:
     - location: /
       backend: http://stemdeck:8000/
-
 services:
   stemdeck:
-    # upstream: ghcr.io/stemdeckapp/stemdeck:0.16.1
-    image: ghcr.nju.edu.cn/stemdeckapp/stemdeck:0.16.1
+    # upstream: ghcr.io/stemdeckapp/stemdeck:0.17.0
+    image: ghcr.nju.edu.cn/stemdeckapp/stemdeck:0.17.0
     environment:
       - STEMDECK_DATA_DIR=/app/jobs
       - STEMDECK_JOBS_DIR=/app/jobs
     binds:
       - /lzcapp/var/jobs:/app/jobs
       - /lzcapp/cache/stemdeck:/cache
-
 usage: |
   上传音频文件或粘贴受支持的在线音频链接，即可分离人声、鼓、贝斯、钢琴、吉他及其他声部。
   分轨结果与应用设置保存在应用数据目录中，Demucs 模型权重保存在可清理缓存中。
