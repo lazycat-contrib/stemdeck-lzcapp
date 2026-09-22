@@ -7,8 +7,8 @@ application:
       backend: http://stemdeck:8000/
 services:
   stemdeck:
-    # upstream: ghcr.io/stemdeckapp/stemdeck:0.17.2
-    image: ghcr.nju.edu.cn/stemdeckapp/stemdeck:0.17.2
+    # upstream: ghcr.io/stemdeckapp/stemdeck:0.17.3
+    image: ghcr.nju.edu.cn/stemdeckapp/stemdeck:0.17.3
     environment:
       - STEMDECK_DATA_DIR=/app/jobs
       - STEMDECK_JOBS_DIR=/app/jobs
